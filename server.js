@@ -6,9 +6,9 @@ var mongoose = require('mongoose');
 
 
 var app = express();
-//require('dotenv').load();
 
-mongoose.connect("mongodb://christoph-phillips:134valentine@ds037395.mongolab.com:37395/fileshortener");
+
+mongoose.connect(process.env.MONGO_URI);
 
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/public', express.static(process.cwd() + '/public'));
