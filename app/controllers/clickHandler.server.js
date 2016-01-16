@@ -6,6 +6,10 @@ var Url = require('../models/users');
  
 var appUrl = "https://url-shortener-api-christoph-phillips.c9users.io/"
 
+ var validUrl = require('valid-url');
+  
+    
+
 
 function ClickHandler () {
 
@@ -38,12 +42,20 @@ function ClickHandler () {
 				else {
 					
 				//CHECK IF URL IS A VALID ADDRESS WITH REGEX
+				/*
 				var re = /^https*:\/\/w{3}\.\w+\.\w+/;
 				var bool = re.test(userUrl);
         
         		if (!bool) {
 	        		res.json('Not a valid URL - please try again.');
 	    			return;
+    			} 
+    			*/
+
+
+    			if (!validUrl.isUri(userUrl)){
+        		res.json('That is not a valid URL. Try starting with http:// or https://');
+        		return;
     			} 
 					
 					Urls
