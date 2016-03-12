@@ -4,7 +4,7 @@ var Urls = require('../models/users.js');
 var Url = require('../models/users');
  
  
-var appUrl = "https://url-shortener-api-christoph-phillips.c9users.io/"
+var appUrl = "https://urlshortenerapi.herokuapp.com/"
 
 var validUrl = require('valid-url');
   
