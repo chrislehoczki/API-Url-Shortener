@@ -6,7 +6,7 @@ var Url = require('../models/users');
  
 var appUrl = "https://url-shortener-api-christoph-phillips.c9users.io/"
 
- var validUrl = require('valid-url');
+var validUrl = require('valid-url');
   
     
 

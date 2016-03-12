@@ -15,8 +15,6 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/common', express.static(process.cwd() + '/app/common'));
 
 
-
-
 routes(app);
 
 var port = process.env.PORT || 8080;
